@@ -13,7 +13,7 @@ declare(strict_types=1);
  */
 
 namespace SerendipityHQ\Component\FatturaElettronica;
-
+use \SerendipityHQ\Component\FatturaElettronica\Model\FatturaElettronica as FatturaElettronicaModel;
 /**
  * Validates the XML of a FatturaElettronica.
  */
@@ -41,7 +41,7 @@ class FatturaElettronica
         $document->appendChild($fatturaElettronicaElement);
         $document->createAttributeNS('http://www.w3.org/2000/09/xmldsig#', 'ds:attr');
 
-        $fatturaElettronica = new \SerendipityHQ\Component\FatturaElettronica\Model\FatturaElettronica($document, $fatturaElettronicaElement);
+        $fatturaElettronica = new FatturaElettronicaModel($document, $fatturaElettronicaElement);
 
         return $fatturaElettronica;
     }
