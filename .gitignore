@@ -2,5 +2,6 @@ phpunit.xml
 vendor
 build
 composer.lock
-.php_cs.cache
-tools
+var
+!var/cache/.gitkeep
+/vendor-bin/**/vendor
