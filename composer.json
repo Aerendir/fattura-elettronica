@@ -1,16 +1,19 @@
 {
     "name": "serendipity_hq/component-fattura-elettronica",
     "description": "Manage electronic invoices in Italy.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["fattura elettronica", "invoice italy", "invoices italy", "electronic invoice", "electornic invoices"],
     "homepage": "https://github.com/Aerendir/component-fattura-elettronica",
+    "support": {
+        "issues": "https://github.com/Aerendir/component-fattura-elettronica/issues"
+    },
     "authors": [
         {
             "name": "Adamo Aerendir Crespi",
             "email": "hello@aerendir.me"
         }
     ],
-    "type": "library",
-    "license": "MIT",
-    "keywords": ["fattura elettronica", "invoice italy", "invoices italy", "electronic invoice", "electornic invoices"],
     "require": {
         "php": "^7.2",
         "ext-dom": "*",
