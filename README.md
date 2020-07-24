@@ -4,7 +4,7 @@
     </a>
 </p>
 
-<h1 align="center">Serendipity HQ Fattura Elettronics</h1>
+<h1 align="center">Serendipity HQ Fattura Elettronica</h1>
 <p align="center">Manages electronic invoices in Italy.</p>
 <p align="center">
     <a href="https://github.com/Aerendir/component-fattura-elettronica/releases"><img src="https://img.shields.io/packagist/v/serendipity_hq/component-fattura-elettronica.svg?style=flat-square"></a>
@@ -40,7 +40,7 @@
 
 <hr />
 <h3 align="center">
-    <b>Do you like this bundle?</b><br />
+    <b>Do you like this library?</b><br />
     <b><a href="#js-repo-pjax-container">LEAVE A &#9733;</a></b>
 </h3>
 <p align="center">
@@ -58,7 +58,7 @@ This library follows the http://semver.org/ versioning conventions.
 
 <hr />
 <h3 align="center">
-    <b>Do you like this bundle?</b><br />
+    <b>Do you like this library?</b><br />
     <b><a href="#js-repo-pjax-container">LEAVE A &#9733;</a></b>
 </h3>
 <p align="center">
