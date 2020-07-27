@@ -55,7 +55,7 @@ return static function (ContainerConfigurator $containerConfigurator) : void {
             SetList::PHPUNIT_SPECIFIC_METHOD,
             SetList::PHPUNIT_YIELD_DATA_PROVIDER,
             SetList::UNWRAP_COMPAT,
-            SetList::SOLID,
+            // SetList::SOLID, // Bugged: https://github.com/Aerendir/component-fattura-elettronica/issues/4
             SetList::SYMFONY_26,
             SetList::SYMFONY_28,
             SetList::SYMFONY_30,
