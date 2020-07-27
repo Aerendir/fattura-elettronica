@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="3.12.2@7c7ebd068f8acaba211d4a2c707c4ba90874fa26">
   <file src="src/Model/Body.php">
-    <ImplementedReturnTypeMismatch occurrences="5">
-      <code>DatiGeneraliInterface</code>
-      <code>BeniServiziInterface</code>
-      <code>?DatiVeicoliInterface</code>
-      <code>?DatiPagamentoInterface</code>
-      <code>?AllegatiInterface</code>
-    </ImplementedReturnTypeMismatch>
     <InvalidReturnType occurrences="5">
       <code>DatiGeneraliInterface</code>
       <code>BeniServiziInterface</code>
@@ -15,9 +8,6 @@
       <code>?DatiPagamentoInterface</code>
       <code>?AllegatiInterface</code>
     </InvalidReturnType>
-    <MethodSignatureMismatch occurrences="1">
-      <code>Body</code>
-    </MethodSignatureMismatch>
     <MissingPropertyType occurrences="5">
       <code>$datiGenerali</code>
       <code>$beniServizi</code>
@@ -25,20 +15,13 @@
       <code>$datiPagamento</code>
       <code>$allegati</code>
     </MissingPropertyType>
-    <UndefinedClass occurrences="5">
-      <code>DatiGeneraliInterface</code>
-      <code>BeniServiziInterface</code>
-      <code>?DatiVeicoliInterface</code>
-      <code>?DatiPagamentoInterface</code>
-      <code>?AllegatiInterface</code>
-    </UndefinedClass>
   </file>
   <file src="src/Model/FatturaElettronica.php">
     <DocblockTypeContradiction occurrences="1">
       <code>null === $this-&gt;header</code>
     </DocblockTypeContradiction>
     <InvalidReturnType occurrences="1">
-      <code>BodyInterface</code>
+      <code>\SerendipityHQ\Component\FatturaElettronica\Psr\BodyInterface</code>
     </InvalidReturnType>
     <PropertyNotSetInConstructor occurrences="2">
       <code>$header</code>
@@ -68,31 +51,16 @@
       <code>$codiceDestinatario</code>
     </PropertyNotSetInConstructor>
   </file>
-  <file src="src/Model/Type/EmailType.php">
-    <UndefinedClass occurrences="1">
-      <code>EmailTypeInterface</code>
-    </UndefinedClass>
-  </file>
-  <file src="src/Model/Type/TelefonoType.php">
-    <UndefinedClass occurrences="1">
-      <code>TelefonoTypeInterface</code>
-    </UndefinedClass>
-  </file>
   <file src="src/Validator/Validator.php">
-    <MissingPropertyType occurrences="1">
-      <code>$schemas</code>
-    </MissingPropertyType>
-    <MixedArgument occurrences="2">
+    <MixedArgument occurrences="1">
       <code>$toXML</code>
-      <code>$this-&gt;schemas</code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
+    <MixedAssignment occurrences="1">
       <code>$toXML</code>
-      <code>$schemaVersion</code>
     </MixedAssignment>
-    <MixedOperand occurrences="1">
+    <PossiblyFalseOperand occurrences="1">
       <code>$schemaVersion</code>
-    </MixedOperand>
+    </PossiblyFalseOperand>
     <PossiblyInvalidMethodCall occurrences="2">
       <code>rewind</code>
       <code>current</code>

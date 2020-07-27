@@ -10,29 +10,24 @@
 return [
     // # Issue statistics:
     // PhanUnreferencedClass : 15+ occurrences
-    // PhanTypeMissingReturnReal : 8 occurrences
     // PhanReadOnlyPrivateProperty : 6 occurrences
     // PhanUnreferencedPrivateProperty : 6 occurrences
-    // PhanUnreferencedPublicMethod : 6 occurrences
-    // PhanParamSignatureMismatch : 5 occurrences
-    // PhanParamSignatureRealMismatchReturnType : 5 occurrences
-    // PhanUndeclaredTypeReturnType : 5 occurrences
-    // PhanUndeclaredInterface : 2 occurrences
+    // PhanTypeMissingReturnReal : 5 occurrences
+    // PhanUnreferencedPublicMethod : 4 occurrences
     // PhanUnreferencedPublicClassConstant : 2 occurrences
-    // PhanUnreferencedUseNormal : 2 occurrences
     // PhanUnusedPublicFinalMethodParameter : 1 occurrence
 
     // Currently, file_suppressions and directory_suppressions are the only supported suppressions
     'file_suppressions' => [
         'src/FatturaElettronica.php' => ['PhanUnreferencedClass', 'PhanUnreferencedPublicMethod'],
-        'src/Model/Body.php' => ['PhanParamSignatureMismatch', 'PhanParamSignatureRealMismatchReturnType', 'PhanTypeMissingReturnReal', 'PhanUndeclaredTypeReturnType', 'PhanUnreferencedClass', 'PhanUnreferencedPrivateProperty'],
-        'src/Model/FatturaElettronica.php' => ['PhanTypeMissingReturnReal', 'PhanUnreferencedPrivateProperty', 'PhanUnreferencedUseNormal', 'PhanUnusedPublicFinalMethodParameter'],
-        'src/Model/Header.php' => ['PhanTypeMissingReturnReal', 'PhanUnreferencedUseNormal'],
+        'src/Model/Body.php' => ['PhanTypeMissingReturnReal', 'PhanUnreferencedClass', 'PhanUnreferencedPrivateProperty'],
+        'src/Model/FatturaElettronica.php' => ['PhanTypeMissingReturnReal', 'PhanUnreferencedPrivateProperty', 'PhanUnusedPublicFinalMethodParameter'],
+        'src/Model/Header.php' => ['PhanTypeMissingReturnReal'],
         'src/Model/Header/DatiTrasmissione.php' => ['PhanReadOnlyPrivateProperty'],
         'src/Model/Header/DatiTrasmissione/ContattiTrasmittente.php' => ['PhanUnreferencedClass'],
-        'src/Model/Type/EmailType.php' => ['PhanUndeclaredInterface', 'PhanUnreferencedClass', 'PhanUnreferencedPublicMethod'],
+        'src/Model/Type/EmailType.php' => ['PhanUnreferencedClass'],
         'src/Model/Type/IdFiscaleType.php' => ['PhanUnreferencedClass'],
-        'src/Model/Type/TelefonoType.php' => ['PhanUndeclaredInterface', 'PhanUnreferencedClass', 'PhanUnreferencedPublicMethod'],
+        'src/Model/Type/TelefonoType.php' => ['PhanUnreferencedClass'],
         'src/Psr/Body/AllegatiInterface.php' => ['PhanUnreferencedClass'],
         'src/Psr/Body/BeniServiziInterface.php' => ['PhanUnreferencedClass'],
         'src/Psr/Body/DatiGeneraliInterface.php' => ['PhanUnreferencedClass'],
@@ -44,8 +39,6 @@ return [
         'src/Psr/Header/RappresentanteFiscaleInterface.php' => ['PhanUnreferencedClass'],
         'src/Psr/Header/SoggettoEmittenteInterface.php' => ['PhanUnreferencedClass'],
         'src/Psr/Header/TerzoIntermediarioOSoggettoEmittenteInterface.php' => ['PhanUnreferencedClass'],
-        'src/Psr/Type/EmailTypeInterface.php' => ['PhanUnreferencedClass'],
-        'src/Psr/Type/TelefonoTypeInterface.php' => ['PhanUnreferencedClass'],
         'src/Validator/Validator.php' => ['PhanUnreferencedClass', 'PhanUnreferencedPublicMethod'],
     ],
     // 'directory_suppressions' => ['src/directory_name' => ['PhanIssueName1', 'PhanIssueName2']] can be manually added if needed.
