@@ -22,7 +22,7 @@ use Symfony\Component\Finder\SplFileInfo;
  */
 final class Validator
 {
-    private const SCHEMAS = ['1.2'];
+    private $schemas = ['1.2'];
     /** @var array */
     private $errors = [];
 
@@ -97,8 +97,7 @@ final class Validator
      */
     private function getSchema(?string $schemaVersion): string
     {
-        $self::SCHEMAS = self::SCHEMAS;
-        $schemaVersion = $schemaVersion ?? \end($self::SCHEMAS);
+        $schemaVersion = $schemaVersion ?? end($this->schemas);
         $finder        = new Finder();
         $iterator      = $finder->name($schemaVersion . '.xsd')->in(__DIR__ . DIRECTORY_SEPARATOR . '../Schemas')->getIterator();
         $iterator->rewind();
