@@ -23,7 +23,7 @@ jobs:
                   php-version: ${{ matrix.php }}
                   coverage: none # disable xdebug, pcov
                   tools: prestissimo
-                  extensions: ast, dom, simplexml, zip
+                  extensions: ast, dom, libxml, simplexml, zip
 
             - name: Fix Symfony version
               run: |

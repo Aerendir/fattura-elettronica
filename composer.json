@@ -17,6 +17,7 @@
     "require": {
         "php": "^7.2",
         "ext-dom": "*",
+        "ext-libxml": "*",
         "ext-simplexml": "*",
         "ext-zip": "*",
         "symfony/finder": "^3.4|^4.4|^5.1",

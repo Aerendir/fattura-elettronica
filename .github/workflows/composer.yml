@@ -21,7 +21,7 @@ jobs:
                   php-version: ${{ matrix.php }}
                   coverage: none # disable xdebug, pcov
                   tools: prestissimo, symfony
-                  extensions: ast, dom, simplexml, zip
+                  extensions: ast, dom, libxml, simplexml, zip
 
             - name: Install Composer deps
               run: |
