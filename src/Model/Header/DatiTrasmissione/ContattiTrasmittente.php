@@ -23,7 +23,13 @@ use SerendipityHQ\Component\FatturaElettronica\Psr\Type\TelefonoTypeInterface;
  */
 final class ContattiTrasmittente implements ContattiTrasmittenteInterface
 {
+    /**
+     * @var \SerendipityHQ\Component\FatturaElettronica\Psr\Type\TelefonoTypeInterface|null
+     */
     private $telefono;
+    /**
+     * @var \SerendipityHQ\Component\FatturaElettronica\Psr\Type\EmailTypeInterface|null
+     */
     private $email;
 
     /**

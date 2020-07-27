@@ -20,9 +20,9 @@ use Symfony\Component\Finder\SplFileInfo;
 /**
  * Validates the XML of a FatturaElettronica.
  */
-class Validator
+final class Validator
 {
-    private $schemas = ['1.2'];
+    private const SCHEMAS = ['1.2'];
     /** @var array */
     private $errors = [];
 
@@ -42,7 +42,7 @@ class Validator
      */
     public function validateXMLString(string $xml, string $schemaVersion = null): void
     {
-        libxml_use_internal_errors(true);
+        \libxml_use_internal_errors(true);
         $dom = new \DOMDocument();
         $dom->loadXML($xml);
 
@@ -52,17 +52,15 @@ class Validator
     /**
      * @param \DOMDocument $document
      * @param string|null  $schemaVersion
-     *
-     * @return Validator
      */
-    public function validate(\DOMDocument $document, ?string $schemaVersion = null): Validator
+    public function validate(\DOMDocument $document, ?string $schemaVersion = null): self
     {
-        libxml_use_internal_errors(true);
+        \libxml_use_internal_errors(true);
 
         if (false === $document->schemaValidate($this->getSchema($schemaVersion))) {
             $this->catchErrors();
         }
-        libxml_use_internal_errors(false);
+        \libxml_use_internal_errors(false);
 
         return $this;
     }
@@ -88,8 +86,8 @@ class Validator
      */
     private function catchErrors(): void
     {
-        $this->errors = libxml_get_errors();
-        libxml_clear_errors();
+        $this->errors = \libxml_get_errors();
+        \libxml_clear_errors();
     }
 
     /**
@@ -99,7 +97,8 @@ class Validator
      */
     private function getSchema(?string $schemaVersion): string
     {
-        $schemaVersion = $schemaVersion ?? end($this->schemas);
+        $self::SCHEMAS = self::SCHEMAS;
+        $schemaVersion = $schemaVersion ?? \end($self::SCHEMAS);
         $finder        = new Finder();
         $iterator      = $finder->name($schemaVersion . '.xsd')->in(__DIR__ . DIRECTORY_SEPARATOR . '../Schemas')->getIterator();
         $iterator->rewind();

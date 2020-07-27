@@ -14,7 +14,8 @@ declare(strict_types=1);
 
 namespace SerendipityHQ\Component\FatturaElettronica\Model\Type;
 
-use SerendipityHQ\Component\FatturaElettronica\Psr\Header\TelefonoTypeInterface;
+
+use SerendipityHQ\Component\FatturaElettronica\Psr\Type\TelefonoTypeInterface;
 
 /**
  * {@inheritdoc}

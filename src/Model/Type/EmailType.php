@@ -14,7 +14,7 @@ declare(strict_types=1);
 
 namespace SerendipityHQ\Component\FatturaElettronica\Model\Type;
 
-use SerendipityHQ\Component\FatturaElettronica\Psr\Header\EmailTypeInterface;
+use SerendipityHQ\Component\FatturaElettronica\Psr\Type\EmailTypeInterface;
 
 /**
  * {@inheritdoc}

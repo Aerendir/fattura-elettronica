@@ -50,7 +50,7 @@ final class FatturaElettronica implements FatturaElettronicaInterface
     /**
      * {@inheritdoc}
      */
-    public function getBody(int $position = 0): BodyInterface
+    public function getBody(int $position = 0): \SerendipityHQ\Component\FatturaElettronica\Psr\BodyInterface
     {
     }
 }

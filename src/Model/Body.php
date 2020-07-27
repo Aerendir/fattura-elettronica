@@ -14,6 +14,11 @@ declare(strict_types=1);
 
 namespace SerendipityHQ\Component\FatturaElettronica\Model;
 
+use SerendipityHQ\Component\FatturaElettronica\Psr\Body\AllegatiInterface;
+use SerendipityHQ\Component\FatturaElettronica\Psr\Body\BeniServiziInterface;
+use SerendipityHQ\Component\FatturaElettronica\Psr\Body\DatiGeneraliInterface;
+use SerendipityHQ\Component\FatturaElettronica\Psr\Body\DatiPagamentoInterface;
+use SerendipityHQ\Component\FatturaElettronica\Psr\Body\DatiVeicoliInterface;
 use SerendipityHQ\Component\FatturaElettronica\Psr\BodyInterface;
 
 /**
