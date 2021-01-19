@@ -34,6 +34,10 @@ final class Validator
     {
         $toXML = $simpleXMLElement->saveXML();
 
+        if (false === \is_string($toXML)) {
+            throw new \RuntimeException('An error occurred writing the XML.');
+        }
+
         $this->validateXMLString($toXML);
     }
 
