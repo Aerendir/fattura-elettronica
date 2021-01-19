@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="3.12.2@7c7ebd068f8acaba211d4a2c707c4ba90874fa26">
+<files psalm-version="4.4.1@9fd7a7d885b3a216cff8dec9d8c21a132f275224">
   <file src="src/Model/Body.php">
     <InvalidReturnType occurrences="5">
-      <code>DatiGeneraliInterface</code>
-      <code>BeniServiziInterface</code>
-      <code>?DatiVeicoliInterface</code>
-      <code>?DatiPagamentoInterface</code>
       <code>?AllegatiInterface</code>
+      <code>?DatiPagamentoInterface</code>
+      <code>?DatiVeicoliInterface</code>
+      <code>BeniServiziInterface</code>
+      <code>DatiGeneraliInterface</code>
     </InvalidReturnType>
     <MissingPropertyType occurrences="5">
-      <code>$datiGenerali</code>
-      <code>$beniServizi</code>
-      <code>$datiVeicoli</code>
-      <code>$datiPagamento</code>
       <code>$allegati</code>
+      <code>$beniServizi</code>
+      <code>$datiGenerali</code>
+      <code>$datiPagamento</code>
+      <code>$datiVeicoli</code>
     </MissingPropertyType>
   </file>
   <file src="src/Model/FatturaElettronica.php">
@@ -21,11 +21,11 @@
       <code>null === $this-&gt;header</code>
     </DocblockTypeContradiction>
     <InvalidReturnType occurrences="1">
-      <code>\SerendipityHQ\Component\FatturaElettronica\Psr\BodyInterface</code>
+      <code>BodyInterface</code>
     </InvalidReturnType>
     <PropertyNotSetInConstructor occurrences="2">
-      <code>$header</code>
       <code>$body</code>
+      <code>$header</code>
     </PropertyNotSetInConstructor>
   </file>
   <file src="src/Model/Header.php">
@@ -33,11 +33,11 @@
       <code>null === $this-&gt;datiTrasmissione</code>
     </DocblockTypeContradiction>
     <InvalidReturnType occurrences="5">
-      <code>CedentePrestatoreInterface</code>
       <code>?RappresentanteFiscaleInterface</code>
-      <code>CessionarioCommittenteInterface</code>
-      <code>?TerzoIntermediarioOSoggettoEmittenteInterface</code>
       <code>?SoggettoEmittenteInterface</code>
+      <code>?TerzoIntermediarioOSoggettoEmittenteInterface</code>
+      <code>CedentePrestatoreInterface</code>
+      <code>CessionarioCommittenteInterface</code>
     </InvalidReturnType>
     <PropertyNotSetInConstructor occurrences="1">
       <code>$datiTrasmissione</code>
@@ -45,10 +45,10 @@
   </file>
   <file src="src/Model/Header/DatiTrasmissione.php">
     <PropertyNotSetInConstructor occurrences="4">
+      <code>$codiceDestinatario</code>
+      <code>$formatoTrasmissione</code>
       <code>$idTrasmittente</code>
       <code>$progressivoInvio</code>
-      <code>$formatoTrasmissione</code>
-      <code>$codiceDestinatario</code>
     </PropertyNotSetInConstructor>
   </file>
   <file src="src/Validator/Validator.php">
@@ -62,8 +62,8 @@
       <code>$schemaVersion</code>
     </PossiblyFalseOperand>
     <PossiblyInvalidMethodCall occurrences="2">
-      <code>rewind</code>
       <code>current</code>
+      <code>rewind</code>
     </PossiblyInvalidMethodCall>
   </file>
 </files>
