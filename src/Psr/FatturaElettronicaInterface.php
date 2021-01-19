@@ -26,5 +26,5 @@ interface FatturaElettronicaInterface
     /**
      * @param int $position
      */
-    public function getBody(int $position = 0): \SerendipityHQ\Component\FatturaElettronica\Psr\BodyInterface;
+    public function getBody(int $position = 0): BodyInterface;
 }
