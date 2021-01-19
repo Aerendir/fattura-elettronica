@@ -9,20 +9,19 @@ jobs:
             fail-fast: false
             matrix:
                 os: [ubuntu-latest]
-                php: ['7.3', '7.4']
+                php: ['7.3', '7.4', '8.0']
                 composer-flags: ['--prefer-stable --prefer-lowest', '']
-                symfony: ['~3.4', '~4.4', '~5.1']
+                symfony: ['~3.4', '~4.4', '~5.2']
         name: PHP ${{ matrix.php }} SF ${{ matrix.symfony }} (${{ matrix.composer-flags }}) on ${{ matrix.os }}
         steps:
             - name: Checkout
               uses: actions/checkout@v2
 
             - name: Setup PHP
-              uses: shivammathur/setup-php@2.4.1
+              uses: shivammathur/setup-php@2.9.0
               with:
                   php-version: ${{ matrix.php }}
                   coverage: none # disable xdebug, pcov
-                  tools: prestissimo
                   extensions: ast, dom, libxml, simplexml, zip
 
             - name: Fix Symfony version
@@ -30,9 +29,16 @@ jobs:
                   composer req symfony/flex
                   composer config extra.symfony.require "${{ matrix.symfony }}"
 
+            - name: Remove Rector
+              run: |
+                  composer rem rector/rector thecodingmachine/phpstan-safe-rule --dev
+                  composer rem thecodingmachine/safe
+
             - name: Install Composer deps
               run: |
-                  composer update ${{ matrix.composer-flags }} --no-interaction --no-suggest
+                  composer update ${{ matrix.composer-flags }} --no-interaction --no-suggest--no-scripts
+                  composer bin phpstan update
+                  composer bin phpunit update
 
             - name: Run PHPStan
               run: |
