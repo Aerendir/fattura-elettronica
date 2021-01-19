@@ -83,7 +83,7 @@ final class DatiTrasmissione implements DatiTrasmissioneInterface
     /**
      * {@inheritdoc}
      */
-    public function getContattiTrasmittente(): ? ContattiTrasmittenteInterface
+    public function getContattiTrasmittente(): ?ContattiTrasmittenteInterface
     {
         return $this->contattiTrasmittente;
     }
@@ -91,7 +91,7 @@ final class DatiTrasmissione implements DatiTrasmissioneInterface
     /**
      * {@inheritdoc}
      */
-    public function getPecDestinatario(): ? EmailTypeInterface
+    public function getPecDestinatario(): ?EmailTypeInterface
     {
         return $this->pecDestinatario;
     }

@@ -51,7 +51,7 @@ interface DatiTrasmissioneInterface
     /**
      * @return ContattiTrasmittenteInterface|null
      */
-    public function getContattiTrasmittente(): ? ContattiTrasmittenteInterface;
+    public function getContattiTrasmittente(): ?ContattiTrasmittenteInterface;
 
     /**
      * @return EmailTypeInterface|null
